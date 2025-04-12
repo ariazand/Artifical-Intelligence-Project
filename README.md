@@ -5,7 +5,7 @@
 ## 🔍 Featured Project: Loan Approval Prediction
 [Loan Approval Prediction Repository](https://github.com/ariazand/loan-approval-prediction)
 
-This project focuses on predicting loan approvals using supervised ML models and emphasizes fairness and interpretability.
+As of now, there are gaps in the way many banks and financial institutions handle loan approval processes. Traditional systems often lack transparency, consistency, and the ability to adapt to nuanced applicant profiles. Our goal is to develop an AI-powered loan approval model that can assess client data and predict whether or not an applicant is likely to be approved, based on multiple financial and personal criteria.
 
 🔗 [Live Demo (Vibe Coding)](https://script.google.com/macros/s/AKfycbxWTRK0mkrFko7qza8j1Bo5yhgpcGv_hYPygYoRxvCQPyjQLIp5Pt_jpnzQ7_DXvlcO5g/exec)
 
