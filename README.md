@@ -29,15 +29,18 @@ Our live web demo allows users to interact with a simplified version of our loan
 
 This prototype is an early example of how financial institutions could integrate explainable and ethical AI into loan decision processes, improving both **efficiency** and **user trust**.
 
-
 ## 📄 Project Report / Documentation
 
-## [Access our full documentation here!](https://your-loan-approval-project-page-link.com)
+### [Access our full documentation here!](https://your-loan-approval-project-page-link.com)
 
-### 📚 Article References : From the International Conference on AI in Finance
+---
+
+### 📚 Article References: From the International Conference on AI in Finance
 
 - **Chen, Dangxing & Ye, Weicheng.** (2024). *Monotonic Neural Additive Models: Pursuing Regulated Machine Learning Models for Credit Scoring*.  
   This paper introduces a type of neural network that is easier to understand and more in line with financial regulations. It helped shape our thinking on how explainable AI can be used in credit scoring models, especially when trust and fairness are key.
+
+---
 
 ## 💻 Tech Stack
 Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe Coding
