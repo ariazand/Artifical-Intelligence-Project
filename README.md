@@ -29,9 +29,10 @@ Our live web demo allows users to interact with a simplified version of our loan
 
 This prototype is an early example of how financial institutions could integrate explainable and ethical AI into loan decision processes, improving both **efficiency** and **user trust**.
 
-## 📄 [Detailed Project Page](https://your-loan-approval-project-page-link.com)
 
 ## 📄 Project Report / Documentation
+
+## [Access our full documentation here!](https://your-loan-approval-project-page-link.com)
 
 ### 📚 Article References : From the International Conference on AI in Finance
 
