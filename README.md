@@ -2,12 +2,39 @@
 
 # 👋 Hi, we are Team 15!
 
-| GitHub Username    | Name                        |
-|--------------------|-----------------------------|
-| [@ariazand](https://github.com/ariazand)         | Aria Zand                  |
-| [@yihangfan2095](https://github.com/yihangfan2095) | Cathy Fan                  |
-| [@jctagbor](https://github.com/jctagbor)         | John Carl Tagbor           |
-| [@mpquinat](https://github.com/mpquinat)         | Melissa Parada-Quinatoa    |
+<div style="display: flex; align-items: flex-start;">
+  <div style="flex: 1;">
+    <table>
+      <thead>
+        <tr>
+          <th>GitHub Username</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/ariazand">@ariazand</a></td>
+          <td>Aria Zand</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/yihangfan2095">@yihangfan2095</a></td>
+          <td>Cathy Fan</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/jctagbor">@jctagbor</a></td>
+          <td>John Carl Tagbor</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/mpquinat">@mpquinat</a></td>
+          <td>Melissa Parada-Quinatoa</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="flex: 1; text-align: right;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/WM_Business_School_Internal_Logo.png" alt="WM Business School Logo" width="150" />
+  </div>
+</div>
 
 ## Loan Approval Prediction Model
 [Loan Approval Prediction Repository](https://github.com/ariazand/loan-approval-prediction)
