@@ -42,31 +42,26 @@ This prototype is an early example of how financial institutions could integrate
 
 
 ## 💻 Tech Stack
+
 Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe Coding
+
+<img src="https://blog.routinehub.co/content/images/2023/02/openAI-chat-gpt-1.jpg" alt="OpenAI ChatGPT Illustration" width="400" style="display:block; margin-left:auto; margin-right:auto;">
+
 ---
-
-
-
 
 ## 📄 [Detailed Project Page](https://docs.google.com/document/d/1xI-PdhQZypXD82kAGWUpnDZrmSbDvlUv0V9oMo42jek/edit?tab=t.0)
+
 ---
-
-
 
 ### 📚 Article References: From the International Conference on AI in Finance
 
 - **Chen, Dangxing & Ye, Weicheng.** (2024). *Monotonic Neural Additive Models: Pursuing Regulated Machine Learning Models for Credit Scoring*.  
   This paper introduces a type of neural network that is easier to understand and more in line with financial regulations. It helped shape our thinking on how explainable AI can be used in credit scoring models, especially when trust and fairness are key.
 
+<img src="https://media.licdn.com/dms/image/v2/D5612AQGwSrOg4YKSDA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1721056474304?e=2147483647&v=beta&t=3SLqGAi03Fmjd4SFsaH64ORnppFj_ikmy0E5MUXNH9k" alt="Image" width="400">
 ---
 
-### 🧠 Kanban Board
-https://github.com/users/ariazand/projects/1
-
-Organized by columns: **To Do**, **In Progress**, **Done**
-
-
-✅ 2. Code File (Repository)
+## ✅ 2. Code File (Repository)
 
 Create a new repo for the project (e.g., loan-approval-prediction) and include:
 
@@ -79,12 +74,16 @@ Create a new repo for the project (e.g., loan-approval-prediction) and include:
     README.md (specific to this project)
 
 Sample README.md for the project:
-
+<img src="https://1000logos.net/wp-content/uploads/2020/08/Python-Logo.jpg" alt="Python Logo" width="300">
 
 ## 📁 Structure
 
 ## 🔍 Key Features
 
+### 🧠 Kanban Board
+https://github.com/users/ariazand/projects/1
+
+Organized by columns: **To Do**, **In Progress**, **Done**
 
 
 ## 🔮 What’s Next: Future Development & Responsible AI
