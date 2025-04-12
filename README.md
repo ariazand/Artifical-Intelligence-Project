@@ -81,16 +81,30 @@ Sample README.md for the project:
 
 ## 📁 Structure
 
-- `notebooks/`: Main Jupyter notebooks
-- `scripts/`: Preprocessing and training scripts
-- `data/`: (Do not include actual data; use a link or .gitignore)
-- `shap_plots/`: Model interpretability visualizations
-
 ## 🔍 Key Features
-- Logistic Regression, Random Forest, XGBoost
-- Model performance evaluation
-- SHAP interpretability
-- Fairness checks across gender/marital status
+
+
+
+## 🔮 What’s Next: Future Development & Responsible AI
+
+As AI continues to reshape financial decision-making, our project aims to grow in a direction that balances innovation with responsibility. Here are the top 5 areas we’re focusing on for future improvement:
+
+1. **Model Refinement with Fairness in Mind**  
+   We plan to improve model performance by testing more advanced supervised algorithms while actively monitoring and mitigating bias.
+
+2. **Transparency & Explainability**  
+   As financial decisions impact real lives, we will continue using different artificial intelligence tools in order to make our predictions interpretable and trustworthy.
+
+3. **Deployment Experience**  
+   We want to upgrade from our initial demo to a polished full-stack web app or dashboard, making loan prediction more interactive and user-friendly.
+
+4. **Data Privacy & Security**  
+   Protecting sensitive financial information is extremely important. Our team will explore techniques for secure storage and responsible data handling throughout the ML pipeline.
+
+5. **Human Oversight & Accountability**  
+   Our decision framework will keep humans in the loop and offers transparency in case reviews or applicant appeals.
+
+
 
 ## 📬 Let's Connect!
 LinkedIn • Email • Portfolio Website
