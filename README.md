@@ -7,15 +7,13 @@
 
 As of now, there are gaps in the way many banks and financial institutions handle loan approval processes. Traditional systems often lack transparency, consistency, and the ability to adapt to nuanced applicant profiles. Our goal is to develop an AI-powered loan approval model that can assess client data and predict whether or not an applicant is likely to be approved, based on multiple financial and personal criteria.
 
-<div style="display: inline-block; text-align: center; margin-right: 20px;">
-  <strong>Wells Fargo</strong><br>
-  <img src="https://www.mmaglobal.com/files/styles/member_logo_large/public/logos/1024px-wells_fargo_bank.png?itok=jD9wzPIe" width="200">
+<div style="text-align: center;">
+  <strong>Credit Card Companies</strong><br>
+  <img src="https://thumbs.dreamstime.com/b/credit-card-companies-design-vector-illustration-most-popular-cards-isolated-white-background-124770411.jpg" width="300">
 </div>
 
-<div style="display: inline-block; text-align: center;">
-  <strong>Bank of America</strong><br>
-  <img src="https://eu-images.contentstack.com/v3/assets/blt7dacf616844cf077/blt805f7bd34515ddab/679970e9e12d0a7eff79d43e/Bank_of_America_Corporation_Logo-1.jpg?width=1280&auto=webp&quality=95&format=jpg&disable=upscale" width="200">
-</div>
+## 🌐 [Live Web Demo](https://your-vibe-coding-link.com)
+Built using Vibe Coding
 
 Our live web demo allows users to interact with a simplified version of our loan approval prediction system.
 
