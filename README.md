@@ -7,7 +7,7 @@
 
 This project focuses on predicting loan approvals using supervised ML models and emphasizes fairness and interpretability.
 
-🔗 [Live Demo (Vibe Coding)](https://your-vibe-coding-link.com)
+🔗 [Live Demo (Vibe Coding)](https://script.google.com/macros/s/AKfycbxWTRK0mkrFko7qza8j1Bo5yhgpcGv_hYPygYoRxvCQPyjQLIp5Pt_jpnzQ7_DXvlcO5g/exec)
 
 📝 [Project Report/Documentation](https://your-loan-approval-project-page-link.com)
 
@@ -16,34 +16,6 @@ This project focuses on predicting loan approvals using supervised ML models and
 ### 🧠 Kanban Board
 
 Organized by columns: **To Do**, **In Progress**, **Done**
-
----
-
-#### 🔜 To Do
-- [ ] Choose final research paper from short list  
-- [ ] Set up Google Sheets Kanban board  
-- [ ] Draft problem statement and why this matters  
-- [ ] Define specific project scope (in main document)  
-- [ ] Outline website / GenAI demo concept  
-- [ ] Set up demo  
-- [ ] Poster Design – Melissa has ideas, team will work on 4/12  
-
----
-
-#### 🛠 In Progress
-- [ ] Summarize findings from chosen research paper  
-- [ ] Main GitHub Repos  
-- [ ] Individual GitHub Repos  
-- [ ] Model Creation  
-- [ ] Design Board  
-- [ ] Glue on Board  
-
----
-
-#### ✅ Done
-- [ ] *(Move completed tasks here)*
-
----
 
 ## 💻 Tech Stack
 Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe Coding
