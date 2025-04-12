@@ -36,6 +36,11 @@ Our live web demo allows users to interact with a simplified version of our loan
 
 This prototype is an early example of how financial institutions could integrate explainable and ethical AI into loan decision processes, improving both **efficiency** and **user trust**.
 
+![Machine Learning in Finance Use Cases](https://www.effectivesoft.com/wp/wp-content/uploads/2023/09/macine-learning-in-finance-use-cases-scaled.jpg)
+
+*Source: [EffectiveSoft – Machine Learning in Finance](https://www.effectivesoft.com/machine-learning-in-finance/)*
+
+---
 ## 📄 Project Report / Documentation
 
 ---
