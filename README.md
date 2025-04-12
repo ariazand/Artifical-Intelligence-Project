@@ -2,39 +2,14 @@
 
 # 👋 Hi, we are Team 15!
 
-<div style="display: flex; align-items: flex-start;">
-  <div style="flex: 1;">
-    <table>
-      <thead>
-        <tr>
-          <th>GitHub Username</th>
-          <th>Name</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><a href="https://github.com/ariazand">@ariazand</a></td>
-          <td>Aria Zand</td>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/yihangfan2095">@yihangfan2095</a></td>
-          <td>Cathy Fan</td>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/jctagbor">@jctagbor</a></td>
-          <td>John Carl Tagbor</td>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/mpquinat">@mpquinat</a></td>
-          <td>Melissa Parada-Quinatoa</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div style="flex: 1; text-align: right;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/WM_Business_School_Internal_Logo.png" alt="WM Business School Logo" width="150" />
-  </div>
-</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/df/WM_Business_School_Internal_Logo.png" alt="WM Business School Logo" width="300">
+
+| GitHub Username    | Name                        |
+|--------------------|-----------------------------|
+| [@ariazand](https://github.com/ariazand)         | Aria Zand                  |
+| [@yihangfan2095](https://github.com/yihangfan2095) | Cathy Fan                  |
+| [@jctagbor](https://github.com/jctagbor)         | John Carl Tagbor           |
+| [@mpquinat](https://github.com/mpquinat)         | Melissa Parada-Quinatoa    |
 
 ## Loan Approval Prediction Model
 [Loan Approval Prediction Repository](https://github.com/ariazand/loan-approval-prediction)
@@ -47,6 +22,7 @@ As of now, there are gaps in the way many banks and financial institutions handl
 </div>
 
 ## 🌐 [Live Web Demo](https://your-vibe-coding-link.com)
+<img src="https://twenty-four.io/wp-content/uploads/2024/06/Google-Apps-Script-1.png" alt="Google Apps Script Image" width="300">
 Built using Vibe Coding
 
 Our live web demo allows users to interact with a simplified version of our loan approval prediction system.
@@ -77,7 +53,6 @@ Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe
 ---
 
 ## 📄 [Project Details ](https://docs.google.com/document/d/1xI-PdhQZypXD82kAGWUpnDZrmSbDvlUv0V9oMo42jek/edit?tab=t.0)
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Kaggle_Logo.svg/1200px-Kaggle_Logo.svg.png" alt="Kaggle Logo" width="300">
 
 💡 Why This Project?
 
@@ -170,4 +145,7 @@ As AI continues to reshape financial decision-making, our project aims to grow i
 ## 📬 Let's Connect!
 LinkedIn • Email • Portfolio Website
 
-## 📄 [Detailed Project Page](https://your-loan-approval-project-page-link.com)
+## 📄 [References]
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Kaggle_Logo.svg/1200px-Kaggle_Logo.svg.png" alt="Kaggle Logo" width="200">
+
+
