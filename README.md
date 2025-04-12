@@ -7,7 +7,9 @@
 
 As of now, there are gaps in the way many banks and financial institutions handle loan approval processes. Traditional systems often lack transparency, consistency, and the ability to adapt to nuanced applicant profiles. Our goal is to develop an AI-powered loan approval model that can assess client data and predict whether or not an applicant is likely to be approved, based on multiple financial and personal criteria.
 
-<div style="display: flex; justify-content: space-between;">
+## 🏦 Sample Loan Providers
+
+<div style="display: flex; justify-content: space-around;">
   <div>
     <strong>Wells Fargo</strong><br>
     <img src="https://www.mmaglobal.com/files/styles/member_logo_large/public/logos/1024px-wells_fargo_bank.png?itok=jD9wzPIe" width="200">
