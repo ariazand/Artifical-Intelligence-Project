@@ -50,7 +50,7 @@ Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe
 ---
 
 ## 📄 [Detailed Project Page](https://docs.google.com/document/d/1xI-PdhQZypXD82kAGWUpnDZrmSbDvlUv0V9oMo42jek/edit?tab=t.0)
-
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Kaggle_Logo.svg/1200px-Kaggle_Logo.svg.png" alt="Kaggle Logo" width="300">
 ---
 
 ### 📚 Article References: From the International Conference on AI in Finance
