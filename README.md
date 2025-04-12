@@ -9,9 +9,18 @@ As of now, there are gaps in the way many banks and financial institutions handl
 
 🔗 [Live Demo (Vibe Coding)](https://script.google.com/macros/s/AKfycby2SsZ1k9NDGLgtGwHcbn6EhHlDICunmO-n9LS2GBy1VmtwUA7WYdUmLXMZbMnTsvDtPg/exec)
 
-📝 [Project Report/Documentation](https://your-loan-approval-project-page-link.com)
+
+## 📄 [Detailed Project Page](https://your-loan-approval-project-page-link.com)
 
 ## 📄 Project Report / Documentation
+
+### 📚 Article References : From the International Conference on AI in Finance
+
+- **Chen, Dangxing & Ye, Weicheng.** (2024). *Monotonic Neural Additive Models: Pursuing Regulated Machine Learning Models for Credit Scoring*.  
+  This paper introduces a type of neural network that is easier to understand and more in line with financial regulations. It helped shape our thinking on how explainable AI can be used in credit scoring models, especially when trust and fairness are key.
+
+## 💻 Tech Stack
+Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe Coding
 
 ### 🧠 Kanban Board
 https://github.com/users/ariazand/projects/1
@@ -20,9 +29,6 @@ Organized by columns: **To Do**, **In Progress**, **Done**
 
 ## 💻 Tech Stack
 Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe Coding
-
-## 📬 Let's Connect!
-LinkedIn • Email • Portfolio Website
 
 ✅ 2. Code File (Repository)
 
@@ -54,6 +60,9 @@ This project uses supervised machine learning to predict loan approval outcomes 
 - Model performance evaluation
 - SHAP interpretability
 - Fairness checks across gender/marital status
+
+## 📬 Let's Connect!
+LinkedIn • Email • Portfolio Website
 
 ## 🌐 [Live Web Demo](https://your-vibe-coding-link.com)
 Built using Vibe Coding
