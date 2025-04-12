@@ -40,13 +40,10 @@ This prototype is an early example of how financial institutions could integrate
 
 *Source: [EffectiveSoft – Machine Learning in Finance](https://www.effectivesoft.com/machine-learning-in-finance/)*
 
----
-## 📄 Project Report / Documentation
 
----
 
-### [Access our full documentation here!](https://your-loan-approval-project-page-link.com)
 
+## 📄 [Detailed Project Page](https://docs.google.com/document/d/1xI-PdhQZypXD82kAGWUpnDZrmSbDvlUv0V9oMo42jek/edit?tab=t.0)
 ---
 
 ### 📚 Article References: From the International Conference on AI in Finance
