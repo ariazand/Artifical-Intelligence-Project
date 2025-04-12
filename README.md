@@ -49,8 +49,41 @@ Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe
 
 ---
 
-## 📄 [Detailed Project Page](https://docs.google.com/document/d/1xI-PdhQZypXD82kAGWUpnDZrmSbDvlUv0V9oMo42jek/edit?tab=t.0)
+## 📄 [Project Details ](https://docs.google.com/document/d/1xI-PdhQZypXD82kAGWUpnDZrmSbDvlUv0V9oMo42jek/edit?tab=t.0)
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Kaggle_Logo.svg/1200px-Kaggle_Logo.svg.png" alt="Kaggle Logo" width="300">
+
+💡 Why This Project?
+
+As Generative AI becomes more prevalent in our lives, the need for institutions to adapt and incorporate it continues to grow. Financial institutions, in particular, are seeing the benefits of using AI to streamline various aspects of the business. Our project focuses on financial service companies, like banks, and the development of AI-powered systems that assist in loan decision-making with greater accuracy, speed, and transparency. We were inspired by the paper “Monotonic Neural Additive Models: Pursuing Regulated Machine Learning Models for Credit Scoring”, submitted to the International Conference on AI in Finance 2022.
+
+We aimed to leverage a machine learning model on a loan dataset from Kaggle to evaluate client profiles more holistically and recognize patterns across financial, educational, and demographic data. This project serves as a prototype for how financial institutions can integrate AI tools to better serve clients and communities.
+
+The project was developed with three main components: a Python machine learning model, a front-end interface, and a back-end system with AI assistance. The goal was to create an AI-powered loan approval system, consisting of:
+
+    A front-end interface where customers fill out a questionnaire.
+
+    A back-end system that processes the data through an AI model for analysis.
+
+    An administrative dashboard that describes the steps and findings.
+
+I. Planning
+
+We planned the project in four phases:
+
+    Data Collection: Collect customer loan application data via a front-end interface.
+
+    Data Storage: Store the data in a structured format using Google Sheets.
+
+    Data Analysis: Analyze the data using a trained machine learning model.
+
+    Display Results: Show insights and results via an administrative dashboard.
+
+II. Front-End Interface
+
+The front-end interface was designed as a web-based questionnaire to collect customer data related to loans and personal details. Once submitted, the data is instantly sent to a Google Sheets page for analysis. This functionality was implemented using Google Apps Script and HTML, ensuring reliable data transfer.
+
+
+
 ---
 
 ### 📚 Article References: From the International Conference on AI in Finance
