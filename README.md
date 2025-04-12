@@ -1,6 +1,14 @@
 # Artifical-Intelligence-Project
 
 # 👋 Hi, we are Team 15!
+## ✍️ Author List
+
+| GitHub Username    | Name                        |
+|--------------------|-----------------------------|
+| [@ariazand](https://github.com/ariazand)         | Aria Zand                  |
+| [@yihangfan2095](https://github.com/yihangfan2095) | Cathy Fan                  |
+| [@jctagbor](https://github.com/jctagbor)         | John Carl Tagbor           |
+| [@mpquinat](https://github.com/mpquinat)         | Melissa Parada-Quinatoa    |
 
 ## 🔍 Featured Project: Loan Approval Prediction
 [Loan Approval Prediction Repository](https://github.com/ariazand/loan-approval-prediction)
