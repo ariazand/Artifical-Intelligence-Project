@@ -14,6 +14,7 @@ This project focuses on predicting loan approvals using supervised ML models and
 ## 📄 Project Report / Documentation
 
 ### 🧠 Kanban Board
+https://github.com/users/ariazand/projects/1
 
 Organized by columns: **To Do**, **In Progress**, **Done**
 
