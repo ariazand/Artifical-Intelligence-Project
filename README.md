@@ -6,23 +6,18 @@
 [Loan Approval Prediction Repository](https://github.com/ariazand/loan-approval-prediction)
 
 As of now, there are gaps in the way many banks and financial institutions handle loan approval processes. Traditional systems often lack transparency, consistency, and the ability to adapt to nuanced applicant profiles. Our goal is to develop an AI-powered loan approval model that can assess client data and predict whether or not an applicant is likely to be approved, based on multiple financial and personal criteria.
-### Wells Fargo  
-![Wells Fargo Logo](https://upload.wikimedia.org/wikipedia/commons/6/69/Wells_Fargo_Logo_%282020%29.png)
 
-### Bank of America  
-![Bank of America Logo](https://eu-images.contentstack.com/v3/assets/blt7dacf616844cf077/blt805f7bd34515ddab/679970e9e12d0a7eff79d43e/Bank_of_America_Corporation_Logo-1.jpg?width=1280&auto=webp&quality=95&format=jpg&disable=upscale)
-## 🌐 [Live Web Demo](https://script.google.com/macros/s/AKfycby2SsZ1k9NDGLgtGwHcbn6EhHlDICunmO-n9LS2GBy1VmtwUA7WYdUmLXMZbMnTsvDtPg/exec)
+<div style="display: flex; justify-content: space-between;">
+  <div>
+    <strong>Wells Fargo</strong><br>
+    <img src="https://www.mmaglobal.com/files/styles/member_logo_large/public/logos/1024px-wells_fargo_bank.png?itok=jD9wzPIe" width="200">
+  </div>
 
-
-<p>
-  <strong>Wells Fargo</strong><br>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Wells_Fargo_Logo_%282020%29.png" width="200">
-</p>
-
-<p>
-  <strong>Bank of America</strong><br>
-  <img src="https://eu-images.contentstack.com/v3/assets/blt7dacf616844cf077/blt805f7bd34515ddab/679970e9e12d0a7eff79d43e/Bank_of_America_Corporation_Logo-1.jpg?width=1280&auto=webp&quality=95&format=jpg&disable=upscale" width="200">
-</p>
+  <div>
+    <strong>Bank of America</strong><br>
+    <img src="https://eu-images.contentstack.com/v3/assets/blt7dacf616844cf077/blt805f7bd34515ddab/679970e9e12d0a7eff79d43e/Bank_of_America_Corporation_Logo-1.jpg?width=1280&auto=webp&quality=95&format=jpg&disable=upscale" width="200">
+  </div>
+</div>
 
 Our live web demo allows users to interact with a simplified version of our loan approval prediction system.
 
