@@ -31,6 +31,8 @@ This prototype is an early example of how financial institutions could integrate
 
 ## 📄 Project Report / Documentation
 
+---
+
 ### [Access our full documentation here!](https://your-loan-approval-project-page-link.com)
 
 ---
@@ -41,9 +43,6 @@ This prototype is an early example of how financial institutions could integrate
   This paper introduces a type of neural network that is easier to understand and more in line with financial regulations. It helped shape our thinking on how explainable AI can be used in credit scoring models, especially when trust and fairness are key.
 
 ---
-
-## 💻 Tech Stack
-Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe Coding
 
 ### 🧠 Kanban Board
 https://github.com/users/ariazand/projects/1
@@ -67,9 +66,6 @@ Create a new repo for the project (e.g., loan-approval-prediction) and include:
 
 Sample README.md for the project:
 
-# 🏦 Loan Approval Prediction
-
-This project uses supervised machine learning to predict loan approval outcomes using applicant features such as income, credit history, education, marital status, and more.
 
 ## 📁 Structure
 
@@ -86,8 +82,5 @@ This project uses supervised machine learning to predict loan approval outcomes 
 
 ## 📬 Let's Connect!
 LinkedIn • Email • Portfolio Website
-
-## 🌐 [Live Web Demo](https://your-vibe-coding-link.com)
-Built using Vibe Coding
 
 ## 📄 [Detailed Project Page](https://your-loan-approval-project-page-link.com)
