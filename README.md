@@ -7,8 +7,22 @@
 
 As of now, there are gaps in the way many banks and financial institutions handle loan approval processes. Traditional systems often lack transparency, consistency, and the ability to adapt to nuanced applicant profiles. Our goal is to develop an AI-powered loan approval model that can assess client data and predict whether or not an applicant is likely to be approved, based on multiple financial and personal criteria.
 
-🔗 [Live Demo (Vibe Coding)](https://script.google.com/macros/s/AKfycby2SsZ1k9NDGLgtGwHcbn6EhHlDICunmO-n9LS2GBy1VmtwUA7WYdUmLXMZbMnTsvDtPg/exec)
 
+## 🌐 [Live Web Demo](https://script.google.com/macros/s/AKfycby2SsZ1k9NDGLgtGwHcbn6EhHlDICunmO-n9LS2GBy1VmtwUA7WYdUmLXMZbMnTsvDtPg/exec)
+
+Our live web demo allows users to interact with a simplified version of our loan approval prediction system.
+
+👉 How it works:
+
+    The front-end form, built using Google Apps Script, lets users input various details commonly used in loan evaluations (e.g., income, credit history, education, loan amount, etc.).
+
+    When submitted, the information is passed to a backend system powered by a trained supervised machine learning model.
+
+    The backend evaluates the applicant’s profile using the model and returns a prediction—indicating whether the applicant is likely to be approved for a loan.
+
+    This setup showcases how AI can provide **real-time**, **accessible predictions** to assist financial decision-making.
+
+This prototype is an early example of how financial institutions could integrate explainable and ethical AI into loan decision processes, improving both **efficiency** and **user trust**.
 
 ## 📄 [Detailed Project Page](https://your-loan-approval-project-page-link.com)
 
