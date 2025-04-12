@@ -1,7 +1,6 @@
 # Artifical-Intelligence-Project
 
 # 👋 Hi, we are Team 15!
-## ✍️ Author List
 
 | GitHub Username    | Name                        |
 |--------------------|-----------------------------|
