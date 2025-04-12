@@ -41,10 +41,17 @@ This prototype is an early example of how financial institutions could integrate
 *Source: [EffectiveSoft – Machine Learning in Finance](https://www.effectivesoft.com/machine-learning-in-finance/)*
 
 
+## 💻 Tech Stack
+Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe Coding
+---
+
+
 
 
 ## 📄 [Detailed Project Page](https://docs.google.com/document/d/1xI-PdhQZypXD82kAGWUpnDZrmSbDvlUv0V9oMo42jek/edit?tab=t.0)
 ---
+
+
 
 ### 📚 Article References: From the International Conference on AI in Finance
 
@@ -58,8 +65,6 @@ https://github.com/users/ariazand/projects/1
 
 Organized by columns: **To Do**, **In Progress**, **Done**
 
-## 💻 Tech Stack
-Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe Coding
 
 ✅ 2. Code File (Repository)
 
