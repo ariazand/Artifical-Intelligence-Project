@@ -114,14 +114,21 @@ Key files and folders include:
 
 ---
 
-### 🔮 What’s Next: Future Development & Responsible AI
+## 🔮 What’s Next: Future Development & Responsible AI
 
-We’re looking to refine the model and focus on improving the user experience while keeping ethical considerations at the forefront. The top 5 areas for future work:
-1. **Model Refinement**: Enhancing model performance and ensuring fairness.
-2. **Transparency & Explainability**: Keeping predictions interpretable and accountable.
-3. **Deployment Experience**: Improving the front-end interface and user interactivity.
-4. **Data Privacy & Security**: Implementing secure data handling techniques.
-5. **Human Oversight & Accountability**: Adding human intervention for better decision-making and appeals.
+### 🚀 What’s Next: Future Development
+We’re continuing to improve both the model and the user experience. Here are our top priorities moving forward:  
+1. **Model Refinement** – Enhance performance, reduce bias, and improve accuracy.  
+2. **Deployment Experience** – Streamline the front-end interface for a more intuitive user journey.  
+3. **Dashboard Enhancements** – Expand functionality to provide better insights for administrators.
+
+### 🧠 Responsible AI Considerations
+As we build, we're committed to ethical AI development and user-centered design. Key focus areas include:  
+1. **Fairness & Bias Mitigation** – Address demographic imbalances and ensure equitable outcomes.  
+2. **Transparency & Explainability** – Provide clear reasoning behind AI decisions, especially for users with non-technical backgrounds.  
+3. **Data Privacy & Security** – Use secure methods to protect sensitive information.  
+4. **Human Oversight & Accountability** – Keep humans in the loop for final decisions and appeals.
+
 
 ---
 <h2>📌 Project Kanban Board</h2>
