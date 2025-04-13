@@ -36,6 +36,16 @@ Built using **Vibe Coding**, our live demo lets users interact with a simplified
 4. This setup showcases how AI can provide **real-time**, **accessible predictions** to assist financial decision-making.
 
 ---
+## ✅ Code Repository & Structure
+
+- **Team 15 Loan Prediction Model.py**  
+  Core Python script for training and running the loan prediction machine learning model.
+  
+- **admin5.html**  
+  Front-end interface for administrators to input or review applicant data.
+  
+- **admin_review.html**  
+  Interface for reviewing model outputs and final decisions, with manual override options.
 
 ### 🔍 Key Tech Stack
 
@@ -100,17 +110,6 @@ This article explores how people perceive fairness in AI decisions, especially i
   <img src="https://media.licdn.com/dms/image/v2/D5612AQGwSrOg4YKSDA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1721056474304?e=2147483647&v=beta&t=3SLqGAi03Fmjd4SFsaH64ORnppFj_ikmy0E5MUXNH9k" alt="Image" width="400">
 </div>
 
----
-
-## ✅ Code Repository & Structure
-
-[Loan Approval Prediction Repository](https://github.com/ariazand/loan-approval-prediction)
-
-Key files and folders include:
-- `notebooks/Loan_Approval_Model.ipynb`
-- `scripts/data_preprocessing.py`
-- `requirements.txt`
-- `README.md`
 
 ---
 
