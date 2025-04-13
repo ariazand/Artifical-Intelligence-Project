@@ -77,6 +77,9 @@ We designed the front-end interface as a web-based questionnaire where users sub
 - **Chen, Dangxing & Ye, Weicheng.** (2024). *Monotonic Neural Additive Models: Pursuing Regulated Machine Learning Models for Credit Scoring*.  
   This paper outlines neural networks that align better with financial regulations and promote explainability in credit scoring models.
 
+ - **Yurrita, M., Draws, T., Balayn, A., Murray-Rust, D., Tintarev, N., & Bozzon, A.** (2024). *Disentangling Fairness Perceptions in Algorithmic Decision-Making*.
+This article explores how people perceive fairness in AI decisions, especially in high-stakes cases like loan approvals. It highlights the need for human oversight, clear explanations for applicants, and transparency to build trust and detect bias in data.
+
 <div style="text-align: center;">
   <img src="https://media.licdn.com/dms/image/v2/D5612AQGwSrOg4YKSDA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1721056474304?e=2147483647&v=beta&t=3SLqGAi03Fmjd4SFsaH64ORnppFj_ikmy0E5MUXNH9k" alt="Image" width="400">
 </div>
