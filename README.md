@@ -57,7 +57,7 @@ Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe
 
 ---
 
-## 📄 [Project Details](https://docs.google.com/document/d/1xI-PdhQZypXD82kAGWUpnDZrmSbDvlUv0V9oMo42jek/edit?tab=t.0)
+## 📄 [Project Details](file:///C:/Users/ariam/Downloads/Project%20Description%20-%20Master%20WriteUp-3.pdf)
 
 ### 💡 Why This Project?
 
