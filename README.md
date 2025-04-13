@@ -20,7 +20,7 @@
 In many traditional banking systems, loan approval lacks transparency, consistency, and adaptability to nuanced applicant profiles. Our goal was to develop an AI-powered loan approval model capable of evaluating client data and predicting loan approval based on various financial and personal criteria.
 
 <div style="text-align: center;">
-  <strong>Credit Card Companies</strong><br>
+  <strong></strong><br>
   <img src="https://thumbs.dreamstime.com/b/credit-card-companies-design-vector-illustration-most-popular-cards-isolated-white-background-124770411.jpg" width="300">
 </div>
 
@@ -116,4 +116,6 @@ We’re looking to refine the model and focus on improving the user experience w
 
 ## 📄 [References](#)
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Kaggle_Logo.svg/1200px-Kaggle_Logo.svg.png" alt="Kaggle Logo" width="200">
+<div style="text-align: center;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Kaggle_Logo.svg/1200px-Kaggle_Logo.svg.png" alt="Kaggle Logo" width="200">
+</div>
