@@ -26,7 +26,7 @@ In many traditional banking systems, loan approval lacks transparency, consisten
 
 ---
 
-## 🌐 [Live Web Demo](https://your-vibe-coding-link.com)
+## 🌐 [Live Web Demo](https://script.google.com/macros/s/AKfycby2SsZ1k9NDGLgtGwHcbn6EhHlDICunmO-n9LS2GBy1VmtwUA7WYdUmLXMZbMnTsvDtPg/exec)
 
 <img src="https://twenty-four.io/wp-content/uploads/2024/06/Google-Apps-Script-1.png" alt="Google Apps Script Image" width="300">
 
