@@ -164,11 +164,12 @@ We’re looking to refine the model and focus on improving the user experience w
 
 ## 📄 [References](#)
 
-- [Kaggle](https://www.kaggle.com/datasets/architsharma01/loan-approval-prediction-dataset/data)
+- [Kaggle Loan Training Dataset](https://www.kaggle.com/datasets/architsharma01/loan-approval-prediction-dataset/data)
+- [Test Dataset](https://github.com/jctagbor/loan-ml-api/blob/main/loan_approval_dataset.csv)
+- Professor Chung!
 - ACM Digital Library
 - ChatGPT (OpenAI)
 - Claude (Anthropic)
-- Professor Chung
 - Google Colab
 - Google Apps Script
 
