@@ -58,18 +58,37 @@ As Generative AI becomes more prevalent, financial institutions are increasingly
 
 ---
 
-### I. Planning
+## I. Planning
 
 Our project was divided into four key phases:
-1. **Data Collection**: Gather customer loan application data via a front-end interface.
-2. **Data Storage**: Store the data in Google Sheets for easy access.
-3. **Data Analysis**: Use a trained machine learning model to analyze the data.
-4. **Results Display**: Present insights and results through an administrative dashboard.
 
-### II. Front-End Interface
+1. **Data Collection**: Gather customer loan application data via a front-end interface.  
+2. **Data Storage**: Store the data in Google Sheets for easy access.  
+3. **Data Analysis**: Use a trained machine learning model to analyze the data.  
+4. **Results Display**: Present insights and results through an administrative dashboard.  
+
+---
+
+## II. Front-End Interface
 
 We designed the front-end interface as a web-based questionnaire where users submit personal and loan information. The data is instantly transferred to Google Sheets for analysis using Google Apps Script and HTML.
 
+---
+
+## III. Back-End Interface
+
+The back-end interface connects the front-end data collection system to the machine learning model, which analyzes the information and decides whether to approve or decline the loan request. This integration was achieved using Google Apps Script and a Python-based model.
+
+Here’s how it works:
+
+1. **Data Extraction**  
+   The data is pulled from Google Sheets and prepared for the model.
+
+2. **AI Model Integration**  
+   A Python-based machine learning model evaluates the applicant’s data and makes a prediction.
+
+3. **Result Handling**  
+   Bank employees can review the model’s decision, then trigger an automated email to notify the applicant.
 ---
 
 ### 📚 Article References: From the International Conference on AI in Finance
