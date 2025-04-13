@@ -110,10 +110,28 @@ We’re looking to refine the model and focus on improving the user experience w
 ---
 
 ## 📬 Let's Connect!
-
-- [LinkedIn](#)
-- [Email](#)
-- [Portfolio](#)
+<table>
+  <tr>
+    <th>Name</th>
+    <th>LinkedIn Profile</th>
+  </tr>
+  <tr>
+    <td>Aria Zand</td>
+    <td><a href="https://www.linkedin.com/in/aria-zand" target="_blank">linkedin.com/in/aria-zand</a></td>
+  </tr>
+  <tr>
+    <td>Melissa Parada-Quinatoa</td>
+    <td><a href="https://www.linkedin.com/in/melissa-parada-quinatoa/" target="_blank">linkedin.com/in/melissa-parada-quinatoa</a></td>
+  </tr>
+  <tr>
+    <td>John Carl Tagbor</td>
+    <td><a href="https://www.linkedin.com/in/jctagbor/" target="_blank">linkedin.com/in/jctagbor</a></td>
+  </tr>
+  <tr>
+    <td>Cathy Fan</td>
+    <td><a href="https://www.linkedin.com/in/yihang-fan-0b4b08276/" target="_blank">linkedin.com/in/yihang-fan-0b4b08276</a></td>
+  </tr>
+</table>
 
 ---
 
