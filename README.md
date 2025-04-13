@@ -13,8 +13,7 @@
 | [@jctagbor](https://github.com/jctagbor)         | John Carl Tagbor           |
 | [@mpquinat](https://github.com/mpquinat)         | Melissa Parada-Quinatoa    |
 
-## Loan Approval Prediction Model
-
+## Scope: AI-Powered Loan Approval Prediction Model
 In many traditional banking systems, loan approval lacks transparency, consistency, and adaptability to nuanced applicant profiles. Our goal was to develop an AI-powered loan approval model capable of evaluating client data and predicting loan approval based on various financial and personal criteria.
 
 <div style="text-align: center;">
