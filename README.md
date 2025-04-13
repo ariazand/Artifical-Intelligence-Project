@@ -108,6 +108,15 @@ We’re looking to refine the model and focus on improving the user experience w
 5. **Human Oversight & Accountability**: Adding human intervention for better decision-making and appeals.
 
 ---
+<h2>📌 Project Kanban Board</h2>
+<p>Track our project progress on GitHub using our Kanban board:</p>
+
+<a href="https://github.com/users/ariazand/projects/1/views/1" target="_blank" style="text-decoration: none;">
+  <div style="padding: 12px 24px; background-color: #2b3137; color: #ffffff; border-radius: 8px; display: inline-block; font-weight: bold;">
+    🚀 View Kanban Board
+  </div>
+</a>
+---
 
 ## 📬 Let's Connect!
 <table>
