@@ -22,7 +22,6 @@ In many traditional banking systems, loan approval lacks transparency, consisten
 </div>
 
 ---
-
 ## 🌐 [Live Web Demo](https://script.google.com/macros/s/AKfycby2SsZ1k9NDGLgtGwHcbn6EhHlDICunmO-n9LS2GBy1VmtwUA7WYdUmLXMZbMnTsvDtPg/exec)
 
 <img src="https://twenty-four.io/wp-content/uploads/2024/06/Google-Apps-Script-1.png" alt="Google Apps Script Image" width="300">
@@ -34,6 +33,18 @@ Built using **Vibe Coding**, our live demo lets users interact with a simplified
 2. Upon submission, the data is passed to a backend system powered by a trained machine learning model.
 3. The backend evaluates the applicant’s profile and provides a loan approval prediction.
 4. This setup showcases how AI can provide **real-time**, **accessible predictions** to assist financial decision-making.
+
+---
+
+## 🔌 [Backend Section](https://jctagbor.github.io/admin5.html)
+
+This link will take you to the backend interface where the machine learning model evaluates the submitted loan application data and provides predictions.
+
+👉 **How the Backend Works**:
+1. The backend handles the submitted data from the front-end interface.
+2. It processes the information through the machine learning model, making predictions based on the applicant's financial data.
+3. Results are then displayed on the backend interface, where admins can review the decisions and take appropriate actions.
+
 
 ---
 ## ✅ Code Repository & Structure
