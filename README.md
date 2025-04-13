@@ -1,4 +1,4 @@
-# Artifical-Intelligence-Project
+# AI and Finance: Innovating the Loan Approval Process with Machine Learning
 
 # 👋 Hi, we are Team 15!
 
