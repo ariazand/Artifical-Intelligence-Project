@@ -15,8 +15,6 @@
 
 ## Loan Approval Prediction Model
 
-[Loan Approval Prediction Repository](https://github.com/ariazand/loan-approval-prediction)
-
 In many traditional banking systems, loan approval lacks transparency, consistency, and adaptability to nuanced applicant profiles. Our goal was to develop an AI-powered loan approval model capable of evaluating client data and predicting loan approval based on various financial and personal criteria.
 
 <div style="text-align: center;">
@@ -42,7 +40,7 @@ Built using **Vibe Coding**, our live demo lets users interact with a simplified
 
 ### 🔍 Key Tech Stack
 
-Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe Coding
+Python · Scikit-learn · SHAP · Pandas · NumPy · Jupyter · HTML/CSS · Vibe Coding via ChatGPT and Claude
 
 <div style="text-align: center;">
   <img src="https://blog.routinehub.co/content/images/2023/02/openAI-chat-gpt-1.jpg" alt="OpenAI ChatGPT Illustration" width="400">
@@ -165,6 +163,14 @@ We’re looking to refine the model and focus on improving the user experience w
 ---
 
 ## 📄 [References](#)
+
+- [Kaggle](https://www.kaggle.com/datasets/architsharma01/loan-approval-prediction-dataset/data)
+- ACM Digital Library
+- ChatGPT (OpenAI)
+- Claude (Anthropic)
+- Professor Chung
+- Google Colab
+- Google Apps Script
 
 <div style="text-align: center;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Kaggle_Logo.svg/1200px-Kaggle_Logo.svg.png" alt="Kaggle Logo" width="200">
