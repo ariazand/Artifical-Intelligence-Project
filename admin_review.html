@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loan Application Viewer</title>
+  <style>
+    /* Add your styles here or use the enhanced corporate blue styling you've uploaded earlier */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f6fc;
+      color: #003366;
+      padding: 20px;
+    }
+    h1 {
+      color: #1a4f8f;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      border-bottom: 2px solid #1a4f8f;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+    .details {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .detail-item {
+      padding: 10px;
+      background: #f9fbff;
+      border-left: 4px solid #1a4f8f;
+      border-radius: 8px;
+    }
+    .detail-item label {
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .detail-item p {
+      margin: 5px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Loan Application Viewer</h1>
+    <label>Select Application by ID or Name</label>
+    <select id="application-id-select"><option value="">-- Select Application ID --</option></select>
+    <select id="full-name-select"><option value="">-- Select Full Name --</option></select>
+
+    <div id="application-details" style="display: none;">
+      <div class="section">
+        <h2>Personal Information</h2>
+        <div class="details" id="personal-info"></div>
+      </div>
+      <div class="section">
+        <h2>Loan Details</h2>
+        <div class="details" id="loan-info"></div>
+      </div>
+      <div class="section">
+        <h2>Decision</h2>
+        <div class="details" id="decision-info"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const csvURL = 'https://raw.githubusercontent.com/jctagbor/loan-ml-api/main/LOANAPP_Predictions.csv';
+
+    const fields = {
+      personal: ['Full Name', 'Date of Birth', 'Gender', 'Email', 'Phone', 'Address', 'No of dependents', 'Education', 'Employment', 'Income', 'Job Years'],
+      loan: ['Loan Amount', 'Loan Term', 'Loan Purpose', 'Existing Loans', 'Credit Score', 'Residential Assets Value', 'Commercial Assets Value', 'Luxury Assets Value', 'Bank Asset Value', 'Time', 'Application ID'],
+      decision: ['Predicted_Approval', 'Approval_Probability', 'Approval_Probability_Pct']
+    };
+
+    function formatCurrency(val) {
+      return val && !isNaN(val) ? `$${parseFloat(val).toLocaleString()}` : 'N/A';
+    }
+
+    function populateSection(sectionId, data, keys, transform = {}) {
+      const container = document.getElementById(sectionId);
+      container.innerHTML = '';
+      keys.forEach(key => {
+        const val = transform[key] ? transform[key](data[key]) : data[key] || 'N/A';
+        const item = document.createElement('div');
+        item.className = 'detail-item';
+        item.innerHTML = `<label>${key}</label><p>${val}</p>`;
+        container.appendChild(item);
+      });
+    }
+
+    function loadData(application) {
+      document.getElementById('application-details').style.display = 'block';
+      populateSection('personal-info', application, fields.personal, { 'Income': formatCurrency });
+      populateSection('loan-info', application, fields.loan, {
+        'Loan Amount': formatCurrency,
+        'Residential Assets Value': formatCurrency,
+        'Commercial Assets Value': formatCurrency,
+        'Luxury Assets Value': formatCurrency,
+        'Bank Asset Value': formatCurrency
+      });
+      populateSection('decision-info', application, fields.decision);
+    }
+
+    function parseCSV(text) {
+      const [headerLine, ...lines] = text.trim().split('\n');
+      const headers = headerLine.split(',');
+      return lines.map(line => {
+        const values = line.split(',');
+        return headers.reduce((acc, h, i) => {
+          acc[h.trim()] = values[i]?.trim();
+          return acc;
+        }, {});
+      });
+    }
+
+    fetch(csvURL)
+      .then(res => res.text())
+      .then(text => {
+        const data = parseCSV(text);
+        const idSelect = document.getElementById('application-id-select');
+        const nameSelect = document.getElementById('full-name-select');
+
+        data.forEach(app => {
+          const idOption = new Option(app['Application ID'], JSON.stringify(app));
+          const nameOption = new Option(app['Full Name'], JSON.stringify(app));
+          idSelect.add(idOption);
+          nameSelect.add(nameOption);
+        });
+
+        [idSelect, nameSelect].forEach(select => {
+          select.addEventListener('change', e => {
+            const selected = e.target.value;
+            if (!selected) return;
+            loadData(JSON.parse(selected));
+          });
+        });
+      })
+      .catch(err => {
+        alert('Failed to load application data.');
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
