@@ -34,6 +34,11 @@ Built using **Vibe Coding**, our live demo lets users interact with a simplified
 3. The backend evaluates the applicant’s profile and provides a loan approval prediction.
 4. This setup showcases how AI can provide **real-time**, **accessible predictions** to assist financial decision-making.
 
+ 🤖 **Example AI Prompt (Front-End Chatbot)**
+
+OBJECTIVES:
+1. Design a web-based credit approval model that has a front-end interface and a back-end interface.
+The front-end interface should be a website that asks questions which are required for the model to run in addition to bio data which help the bank or financial institution to keep track of the person. Other information like address and telephone number could be collected.
 ---
 
 ## 🔌 [Backend Section](https://jctagbor.github.io/admin_review.html)
@@ -44,8 +49,6 @@ This link will take you to the backend interface where the machine learning mode
 1. The backend handles the submitted data from the front-end interface.
 2. It processes the information through the machine learning model, making predictions based on the applicant's financial data.
 3. Results are then displayed on the backend interface, where admins can review the decisions and take appropriate actions.
-
-
 ---
 ## ✅ Code Repository & Structure
 
