@@ -1,642 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loan Application Admin Panel</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <style>
-    :root {
-      --primary-color: #0d47a1;
-      --primary-light: #1565c0;
-      --secondary-color: #bbdefb;
-      --accent-color: #2196f3;
-      --success-color: #43a047;
-      --danger-color: #e53935;
-      --text-color: #333;
-      --text-light: #757575;
-      --background-color: #f5f7fa;
-      --card-color: #ffffff;
-      --border-radius: 6px;
-      --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    }
-    
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    body {
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-      background: var(--background-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .header {
-      background: var(--primary-color);
-      color: white;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    .header h1 {
-      margin: 0;
-      font-weight: 400;
-      font-size: 1.5rem;
-    }
-    
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-    
-    .card {
-      background: var(--card-color);
-      border-radius: var(--border-radius);
-      box-shadow: var(--box-shadow);
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-    
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #eee;
-    }
-    
-    .card-header h2 {
-      color: var(--primary-color);
-      font-weight: 500;
-      font-size: 1.25rem;
-      margin: 0;
-    }
-    
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-      color: var(--text-light);
-    }
-    
-    select {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      font-size: 1rem;
-      border: 1px solid #ddd;
-      border-radius: var(--border-radius);
-      background-color: white;
-      margin-bottom: 1.5rem;
-      color: var(--text-color);
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    
-    select:focus {
-      border-color: var(--accent-color);
-      box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
-      outline: none;
-    }
-    
-    button {
-      padding: 0.75rem 1.5rem;
-      font-size: 0.9rem;
-      font-weight: 500;
-      border-radius: var(--border-radius);
-      cursor: pointer;
-      transition: all 0.2s;
-      border: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 0.75rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    
-    .btn-primary {
-      background-color: var(--primary-color);
-      color: white;
-    }
-    
-    .btn-primary:hover {
-      background-color: var(--primary-light);
-    }
-    
-    .btn-success {
-      background-color: var(--success-color);
-      color: white;
-    }
-    
-    .btn-success:hover {
-      background-color: #2e7d32;
-    }
-    
-    button:disabled {
-      background-color: #e0e0e0;
-      color: #9e9e9e;
-      cursor: not-allowed;
-      box-shadow: none;
-    }
-    
-    .info-section, .decision-section {
-      background: #f8fafc;
-      border-radius: var(--border-radius);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-left: 4px solid var(--accent-color);
-    }
-    
-    .decision-section {
-      border-left-color: var(--primary-color);
-    }
-    
-    .decision-section.approved {
-      border-left-color: var(--success-color);
-    }
-    
-    .decision-section.rejected {
-      border-left-color: var(--danger-color);
-    }
-    
-    .info-section h3, .decision-section h3 {
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      font-weight: 500;
-    }
-    
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-    
-    .info-item {
-      margin-bottom: 0.75rem;
-    }
-    
-    .info-label {
-      font-weight: 500;
-      color: var(--text-light);
-      font-size: 0.9rem;
-      margin-bottom: 0.25rem;
-    }
-    
-    .info-value {
-      font-size: 1rem;
-    }
-    
-    .decision-result {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-      border-radius: var(--border-radius);
-      margin-top: 1rem;
-      background: rgba(255, 255, 255, 0.7);
-    }
-    
-    .decision-status {
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-    
-    .status-approved {
-      color: var(--success-color);
-    }
-    
-    .status-rejected {
-      color: var(--danger-color);
-    }
-    
-    .decision-probability {
-      font-size: 0.9rem;
-      color: var(--text-light);
-      background: rgba(0, 0, 0, 0.05);
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-    }
-    
-    .action-buttons {
-      display: flex;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-    
-    .notification {
-      padding: 1rem 1.5rem;
-      margin-top: 1rem;
-      border-radius: var(--border-radius);
-      display: none;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-    
-    .success {
-      background-color: rgba(67, 160, 71, 0.1);
-      color: var(--success-color);
-      border: 1px solid rgba(67, 160, 71, 0.2);
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    /* Icons */
-    .icon {
-      margin-right: 0.5rem;
-      fill: currentColor;
-      width: 18px;
-      height: 18px;
-    }
-    
-    @media (max-width: 768px) {
-      .info-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .action-buttons {
-        flex-direction: column;
-      }
-      
-      button {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 0.5rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application Review System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-blue: #003366;
+            --secondary-blue: #004080;
+            --accent-blue: #00509d;
+            --light-blue: #e6f2ff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .card-header {
+            background-color: var(--secondary-blue);
+            color: white;
+            font-weight: 600;
+            border-radius: 8px 8px 0 0 !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-blue);
+            border-color: var(--secondary-blue);
+        }
+        
+        .btn-outline-primary {
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--accent-blue);
+            color: white;
+        }
+        
+        .decision-approved {
+            background-color: #d4edda;
+            color: #155724;
+            border-left: 5px solid #28a745;
+        }
+        
+        .decision-rejected {
+            background-color: #f8d7da;
+            color: #721c24;
+            border-left: 5px solid #dc3545;
+        }
+        
+        .detail-label {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+        
+        .section-divider {
+            border-top: 2px solid var(--light-blue);
+            margin: 20px 0;
+        }
+        
+        .probability-meter {
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .probability-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #dc3545, #ffc107, #28a745);
+        }
+        
+        .form-select:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 0.25rem rgba(0, 80, 157, 0.25);
+        }
+        
+        .file-upload {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        
+        .file-upload-input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <div class="header">
-    <h1>Team15Bank Loan Management System</h1>
-  </div>
-  
-  <div class="container">
-    <div class="card">
-      <div class="card-header">
-        <h2>Loan Application Review</h2>
-      </div>
-      
-      <label for="applicantSelect">Select Applicant</label>
-      <select id="applicantSelect">
-        <option value="">-- Select Applicant --</option>
-      </select>
-      
-      <div class="info-section" id="applicationInfo" style="display:none;">
-        <h3>Application Details</h3>
-        <div class="info-grid" id="applicantDetails">
-          <!-- Applicant details will be populated here -->
+    <div class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1><i class="bi bi-clipboard-data"></i> Loan Application Review System</h1>
+                </div>
+                <div class="col-md-4 text-end">
+                    <img src="https://i.ibb.co/8nHBqsmb/T15logo.png" alt="Company Logo" style="height: 40px;">
+                </div>
+            </div>
         </div>
-      </div>
-      
-      <div class="decision-section" id="modelDecision" style="display:none;">
-        <h3>Credit Decision</h3>
-        <div class="decision-result">
-          <div class="decision-status" id="decisionStatus">Decision Pending</div>
-          <div class="decision-probability" id="decisionProbability"></div>
-        </div>
-      </div>
-      
-      <div class="action-buttons" id="actionButtons" style="display:none;">
-        <button id="downloadReportBtn" class="btn-primary">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
-          </svg>
-          Download PDF Report
-        </button>
-        <button id="sendEmailBtn" class="btn-success" disabled>
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-          Send Approval Email
-        </button>
-      </div>
-      
-      <div id="notification" class="notification"></div>
     </div>
-  </div>
-  
-  <script>
-    const sheetURL = 'https://opensheet.elk.sh/1awqj-lc5FncSduEoXvQMw3lXSVXVqEqDXCgLHpMWjB0/Sheet1';
-    let allData = [];
-    let currentEntry = null;
-    let currentDecision = null;
     
-    // Check if jsPDF is loaded correctly
-    if (typeof window.jspdf === 'undefined') {
-      console.warn('jsPDF library not loaded properly');
-    }
-    
-    async function fetchData() {
-      try {
-        const res = await fetch(sheetURL);
-        const data = await res.json();
-        allData = data;
-        const select = document.getElementById('applicantSelect');
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        Load Application Data
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="csvFile" class="form-label">Upload your loan applications CSV file:</label>
+                            <div class="file-upload btn btn-primary w-100">
+                                <span id="fileName">Choose file...</span>
+                                <input type="file" class="file-upload-input" id="csvFile" accept=".csv">
+                            </div>
+                        </div>
+                        <div class="alert alert-info">
+                            <i class="bi bi-info-circle"></i> Please upload the "LOANAPP_Predictions.csv" file from your desktop
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        if (data.length === 0) {
-          const option = document.createElement('option');
-          option.value = "";
-          option.textContent = "No applicants found";
-          select.appendChild(option);
-          return;
+        <div class="row mb-4" id="applicationSelection" style="display: none;">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        Select Application
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <select class="form-select" id="applicationSelect">
+                                    <option value="">-- Select an Application ID --</option>
+                                    <!-- Options will be populated by JavaScript -->
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-primary w-100" id="loadBtn" disabled>
+                                    <i class="bi bi-search"></i> Load Application
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row" id="applicationDetails" style="display: none;">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        Application Details
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><span class="detail-label">Full Name:</span> <span id="fullName"></span></p>
+                                <p><span class="detail-label">Date of Birth:</span> <span id="dob"></span></p>
+                                <p><span class="detail-label">Gender:</span> <span id="gender"></span></p>
+                                <p><span class="detail-label">Email:</span> <span id="email"></span></p>
+                                <p><span class="detail-label">Phone:</span> <span id="phone"></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><span class="detail-label">Application ID:</span> <span id="appId"></span></p>
+                                <p><span class="detail-label">Application Date:</span> <span id="appDate"></span></p>
+                                <p><span class="detail-label">Address:</span> <span id="address"></span></p>
+                                <p><span class="detail-label">No. of Dependents:</span> <span id="dependents"></span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="section-divider"></div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><span class="detail-label">Education:</span> <span id="education"></span></p>
+                                <p><span class="detail-label">Employment Status:</span> <span id="employment"></span></p>
+                                <p><span class="detail-label">Annual Income:</span> $<span id="income"></span></p>
+                                <p><span class="detail-label">Years in Current Job:</span> <span id="jobYears"></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><span class="detail-label">Credit Score:</span> <span id="creditScore"></span></p>
+                                <p><span class="detail-label">Existing Loans:</span> <span id="existingLoans"></span></p>
+                                <p><span class="detail-label">Loan Purpose:</span> <span id="loanPurpose"></span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="section-divider"></div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><span class="detail-label">Loan Amount Requested:</span> $<span id="loanAmount"></span></p>
+                                <p><span class="detail-label">Loan Term:</span> <span id="loanTerm"></span> months</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><span class="detail-label">Residential Assets:</span> $<span id="residentialAssets"></span></p>
+                                <p><span class="detail-label">Commercial Assets:</span> $<span id="commercialAssets"></span></p>
+                                <p><span class="detail-label">Luxury Assets:</span> $<span id="luxuryAssets"></span></p>
+                                <p><span class="detail-label">Bank Assets:</span> $<span id="bankAssets"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Application Decision
+                    </div>
+                    <div class="card-body">
+                        <div id="decisionBox" class="p-3 mb-4 rounded">
+                            <h5 class="mb-3">Decision: <span id="decisionText"></span></h5>
+                            <div class="mb-3">
+                                <span class="detail-label">Probability of Default:</span> <span id="defaultProb"></span>%
+                            </div>
+                            <div class="probability-meter mb-3">
+                                <div class="probability-fill" id="probabilityBar"></div>
+                            </div>
+                            <div class="small text-muted">
+                                <span id="decisionDetails"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid gap-3">
+                            <button class="btn btn-primary" id="downloadPdf">
+                                <i class="bi bi-file-earmark-pdf"></i> Download PDF
+                            </button>
+                            <button class="btn btn-outline-primary" id="sendEmail">
+                                <i class="bi bi-envelope"></i> Send Decision Email
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <script>
+        // Global variable to store all application data
+        let applications = [];
+        
+        // Function to handle file upload
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            // Update file name display
+            document.getElementById('fileName').textContent = file.name;
+            
+            // Parse the CSV file
+            Papa.parse(file, {
+                header: true,
+                skipEmptyLines: true,
+                complete: function(results) {
+                    applications = results.data;
+                    if (applications.length > 0) {
+                        populateApplicationDropdown();
+                        document.getElementById('applicationSelection').style.display = 'flex';
+                    } else {
+                        alert("No valid application data found in the file.");
+                    }
+                },
+                error: function(error) {
+                    console.error("Error parsing CSV:", error);
+                    alert("Error parsing the CSV file. Please check the file format.");
+                }
+            });
         }
         
-        data.forEach(entry => {
-          const option = document.createElement('option');
-          option.value = entry["Full Name"]; // replace with actual column title
-          option.textContent = entry["Full Name"];
-          select.appendChild(option);
+        // Populate the application dropdown with IDs
+        function populateApplicationDropdown() {
+            const select = document.getElementById('applicationSelect');
+            
+            // Clear existing options (keeping the first placeholder)
+            while (select.options.length > 1) {
+                select.remove(1);
+            }
+            
+            // Add application IDs to dropdown
+            applications.forEach(app => {
+                if (app['Application ID']) {
+                    const option = document.createElement('option');
+                    option.value = app['Application ID'];
+                    option.textContent = app['Application ID'] + ' - ' + app['Full Name'];
+                    select.appendChild(option);
+                }
+            });
+            
+            // Enable the load button
+            document.getElementById('loadBtn').disabled = false;
+        }
+        
+        // Display application details when an application is selected
+        function displayApplicationDetails(appId) {
+            const application = applications.find(app => app['Application ID'] === appId);
+            if (!application) return;
+            
+            // Personal Information
+            document.getElementById('fullName').textContent = application['Full Name'] || 'N/A';
+            document.getElementById('dob').textContent = application['Date of Birth'] || 'N/A';
+            document.getElementById('gender').textContent = application['Gender'] || 'N/A';
+            document.getElementById('email').textContent = application['Email'] || 'N/A';
+            document.getElementById('phone').textContent = application['Phone'] || 'N/A';
+            document.getElementById('address').textContent = application['Address'] || 'N/A';
+            document.getElementById('dependents').textContent = application['No of dependents'] || 'N/A';
+            document.getElementById('appId').textContent = application['Application ID'] || 'N/A';
+            document.getElementById('appDate').textContent = application['Time'] || 'N/A';
+            
+            // Financial Information
+            document.getElementById('education').textContent = application['Education'] || 'N/A';
+            document.getElementById('employment').textContent = application['Employment'] || 'N/A';
+            document.getElementById('income').textContent = application['Income'] ? parseInt(application['Income']).toLocaleString() : 'N/A';
+            document.getElementById('jobYears').textContent = application['Job Years'] || 'N/A';
+            document.getElementById('creditScore').textContent = application['Credit Score'] || 'N/A';
+            document.getElementById('existingLoans').textContent = application['Existing Loans'] || 'N/A';
+            document.getElementById('loanPurpose').textContent = application['Loan Purpose'] || 'N/A';
+            
+            // Loan Details
+            document.getElementById('loanAmount').textContent = application['Loan Amount'] ? parseInt(application['Loan Amount']).toLocaleString() : 'N/A';
+            document.getElementById('loanTerm').textContent = application['Loan Term'] || 'N/A';
+            
+            // Asset Information
+            document.getElementById('residentialAssets').textContent = application['Residential Assets Value'] ? parseInt(application['Residential Assets Value']).toLocaleString() : 'N/A';
+            document.getElementById('commercialAssets').textContent = application['Commercial Assets Value'] ? parseInt(application['Commercial Assets Value']).toLocaleString() : 'N/A';
+            document.getElementById('luxuryAssets').textContent = application['Luxury Assets Value'] ? parseInt(application['Luxury Assets Value']).toLocaleString() : 'N/A';
+            document.getElementById('bankAssets').textContent = application['Bank Asset Value'] ? parseInt(application['Bank Asset Value']).toLocaleString() : 'N/A';
+            
+            // Decision Information
+            const isApproved = application['Predicted_Approval'] === 'Approved';
+            const decisionBox = document.getElementById('decisionBox');
+            const defaultProb = 100 - (parseFloat(application['Approval_Probability_Pct']) || 0);
+            
+            document.getElementById('decisionText').textContent = isApproved ? 'Approved' : 'Rejected';
+            document.getElementById('defaultProb').textContent = defaultProb.toFixed(1);
+            
+            // Set probability bar width and color
+            const probBar = document.getElementById('probabilityBar');
+            probBar.style.width = `${defaultProb}%`;
+            
+            // Color based on risk level
+            if (defaultProb < 20) {
+                probBar.style.backgroundColor = '#28a745'; // Green
+            } else if (defaultProb < 50) {
+                probBar.style.backgroundColor = '#ffc107'; // Yellow
+            } else {
+                probBar.style.backgroundColor = '#dc3545'; // Red
+            }
+            
+            // Set decision box style based on approval
+            decisionBox.className = isApproved ? 'p-3 mb-4 rounded decision-approved' : 'p-3 mb-4 rounded decision-rejected';
+            
+            // Set decision details
+            document.getElementById('decisionDetails').textContent = isApproved 
+                ? 'This application meets our credit criteria.' 
+                : 'This application does not meet our current credit standards.';
+            
+            // Show the application details section
+            document.getElementById('applicationDetails').style.display = 'flex';
+        }
+        
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // File upload handler
+            document.getElementById('csvFile').addEventListener('change', handleFileUpload);
+            
+            // Load button click handler
+            document.getElementById('loadBtn').addEventListener('click', function() {
+                const selectedId = document.getElementById('applicationSelect').value;
+                if (selectedId) {
+                    displayApplicationDetails(selectedId);
+                }
+            });
+            
+            // Download PDF button click handler (mock functionality)
+            document.getElementById('downloadPdf').addEventListener('click', function() {
+                alert('PDF download functionality would be implemented here. This is a mock button.');
+                // In a real implementation, you would generate a PDF from the current application data
+            });
+            
+            // Send Email button click handler (mock functionality)
+            document.getElementById('sendEmail').addEventListener('click', function() {
+                const selectedId = document.getElementById('applicationSelect').value;
+                const application = applications.find(app => app['Application ID'] === selectedId);
+                if (application) {
+                    const email = application['Email'];
+                    alert(`Email would be sent to: ${email}\n\nThis is a mock button. In a real implementation, an email would be sent with the decision details.`);
+                } else {
+                    alert('Please select an application first.');
+                }
+            });
         });
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        document.getElementById('applicantSelect').innerHTML = '<option value="">Error loading data</option>';
-      }
-    }
-    
-    function simulateModelPrediction(entry) {
-      // Simulated model logic based on one field (e.g., Credit Score or Income)
-      let score = parseInt(entry["Credit Score"]) || 600;
-      let probability = Math.max(0, Math.min(1, (700 - score) / 200));
-      let approved = probability < 0.5;
-      return {
-        decision: approved ? "Approved" : "Rejected",
-        probability: (probability * 100).toFixed(2) + "%"
-      };
-    }
-    
-    function generatePDFReport(entry, outcome) {
-      if (typeof window.jspdf === 'undefined') {
-        alert('PDF generation library is not loaded. Please try again later.');
-        return null;
-      }
-      
-      // Create new jsPDF instance
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF();
-      
-      // Add logo and header
-      doc.setFillColor(13, 71, 161); // Primary color
-      doc.rect(0, 0, 210, 25, 'F');
-      doc.setTextColor(255, 255, 255);
-      doc.setFontSize(18);
-      doc.setFont('helvetica', 'bold');
-      doc.text("Team15Bank Loan Management System", 105, 15, { align: 'center' });
-      
-      // Report title
-      doc.setTextColor(13, 71, 161);
-      doc.setFontSize(16);
-      doc.text("LOAN APPLICATION REPORT", 105, 40, { align: 'center' });
-      
-      // Date
-      doc.setFontSize(10);
-      doc.setTextColor(100, 100, 100);
-      doc.text("Report Generated: " + new Date().toLocaleString(), 105, 48, { align: 'center' });
-      
-      // Applicant info section
-      doc.setDrawColor(33, 150, 243); // Accent color
-      doc.setLineWidth(0.5);
-      doc.line(20, 55, 190, 55);
-      
-      doc.setFontSize(14);
-      doc.setTextColor(13, 71, 161);
-      doc.setFont('helvetica', 'bold');
-      doc.text("APPLICANT INFORMATION", 20, 65);
-      
-      // Applicant details
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(11);
-      doc.setTextColor(60, 60, 60);
-      
-      let yPos = 75;
-      const leftColumn = 20;
-      const rightColumn = 105;
-      let columnCount = 0;
-      
-      for (const [key, value] of Object.entries(entry)) {
-        if (key === "Full Name" || key === "Email" || key === "Phone" || key === "Address") {
-          // Important fields go at the top
-          doc.setFont('helvetica', 'bold');
-          doc.setTextColor(60, 60, 60);
-          doc.text(`${key}:`, leftColumn, yPos);
-          doc.setFont('helvetica', 'normal');
-          doc.setTextColor(0, 0, 0);
-          doc.text(`${value}`, leftColumn + 35, yPos);
-          yPos += 8;
-        }
-      }
-      
-      // Add a little spacing
-      yPos += 5;
-      
-      // Add remaining fields in two columns
-      columnCount = 0;
-      doc.setFont('helvetica', 'normal');
-      doc.setTextColor(60, 60, 60);
-      
-      for (const [key, value] of Object.entries(entry)) {
-        if (key !== "Full Name" && key !== "Email" && key !== "Phone" && key !== "Address") {
-          const xPos = columnCount % 2 === 0 ? leftColumn : rightColumn;
-          
-          doc.setFont('helvetica', 'bold');
-          doc.text(`${key}:`, xPos, yPos);
-          doc.setFont('helvetica', 'normal');
-          doc.text(`${value}`, xPos + 35, yPos);
-          
-          if (columnCount % 2 === 1) {
-            yPos += 8;
-          }
-          
-          columnCount++;
-        }
-      }
-      
-      // Ensure we move to a new line if we ended on an odd column
-      if (columnCount % 2 === 1) {
-        yPos += 8;
-      }
-      
-      // Credit decision section
-      yPos += 10;
-      doc.setDrawColor(33, 150, 243);
-      doc.line(20, yPos, 190, yPos);
-      
-      yPos += 10;
-      doc.setFontSize(14);
-      doc.setTextColor(13, 71, 161);
-      doc.setFont('helvetica', 'bold');
-      doc.text("CREDIT DECISION", 20, yPos);
-      
-      yPos += 10;
-      doc.setFontSize(12);
-      doc.setTextColor(0, 0, 0);
-      doc.text("Decision:", 20, yPos);
-      
-      // Set color based on decision
-      if (outcome.decision === "Approved") {
-        doc.setTextColor(67, 160, 71); // success-color
-      } else {
-        doc.setTextColor(229, 57, 53); // danger-color
-      }
-      
-      doc.setFont('helvetica', 'bold');
-      doc.text(outcome.decision, 60, yPos);
-      
-      yPos += 8;
-      doc.setTextColor(0, 0, 0);
-      doc.setFont('helvetica', 'normal');
-      doc.text("Probability of Default:", 20, yPos);
-      doc.text(outcome.probability, 60, yPos);
-      
-      // Add footer
-      doc.setFontSize(10);
-      doc.setTextColor(100, 100, 100);
-      doc.text("This document is confidential and intended only for authorized personnel.", 105, 280, { align: 'center' });
-      doc.text("Team15Bank © " + new Date().getFullYear(), 105, 285, { align: 'center' });
-      
-      return doc;
-    }
-    
-    function sendApprovalEmail(entry) {
-      // In a real application, this would connect to an email API service
-      // For this demo, we're just simulating the email sending
-      console.log(`Email would be sent to: ${entry["Email"]}`);
-      
-      // Show notification
-      const notification = document.getElementById('notification');
-      notification.innerHTML = `
-        <strong>Success:</strong> Approval email sent to ${entry["Email"]}
-      `;
-      notification.className = "notification success";
-      notification.style.display = "block";
-      
-      // Hide notification after 5 seconds
-      setTimeout(() => {
-        notification.style.display = "none";
-      }, 5000);
-      
-      return true;
-    }
-    
-    document.getElementById('applicantSelect').addEventListener('change', function () {
-      const name = this.value;
-      currentEntry = allData.find(row => row["Full Name"] === name);
-      
-      if (!currentEntry) {
-        document.getElementById('applicationInfo').style.display = 'none';
-        document.getElementById('modelDecision').style.display = 'none';
-        document.getElementById('actionButtons').style.display = 'none';
-        return;
-      }
-      
-      // Populate applicant details
-      const detailsContainer = document.getElementById('applicantDetails');
-      detailsContainer.innerHTML = '';
-      
-      // Loop through all properties and create info items
-      for (const [key, value] of Object.entries(currentEntry)) {
-        const infoItem = document.createElement('div');
-        infoItem.className = 'info-item';
-        infoItem.innerHTML = `
-          <div class="info-label">${key}</div>
-          <div class="info-value">${value}</div>
-        `;
-        detailsContainer.appendChild(infoItem);
-      }
-      
-      document.getElementById('applicationInfo').style.display = 'block';
-      
-      // Set decision
-      currentDecision = simulateModelPrediction(currentEntry);
-      
-      const decisionSection = document.getElementById('modelDecision');
-      decisionSection.className = currentDecision.decision === "Approved" ? 
-                                "decision-section approved" : 
-                                "decision-section rejected";
-      
-      const decisionStatus = document.getElementById('decisionStatus');
-      decisionStatus.textContent = `Decision: ${currentDecision.decision}`;
-      decisionStatus.className = currentDecision.decision === "Approved" ? 
-                               "decision-status status-approved" : 
-                               "decision-status status-rejected";
-      
-      document.getElementById('decisionProbability').textContent = `Default Risk: ${currentDecision.probability}`;
-      decisionSection.style.display = 'block';
-      
-      // Show action buttons
-      document.getElementById('actionButtons').style.display = 'flex';
-      
-      // Enable/disable email button based on decision
-      const sendEmailBtn = document.getElementById('sendEmailBtn');
-      if (currentDecision.decision === "Approved") {
-        sendEmailBtn.disabled = false;
-        sendEmailBtn.innerHTML = `
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-          Send Approval Email
-        `;
-      } else {
-        sendEmailBtn.disabled = true;
-        sendEmailBtn.innerHTML = `
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="8" y1="12" x2="16" y2="12"></line>
-          </svg>
-          Cannot Email (Rejected)
-        `;
-      }
-    });
-    
-    document.getElementById('downloadReportBtn').addEventListener('click', function() {
-      if (!currentEntry || !currentDecision) return;
-      
-      try {
-        const pdfDoc = generatePDFReport(currentEntry, currentDecision);
-        if (pdfDoc) {
-          const filename = `Team15Bank_Loan_Report_${currentEntry["Full Name"].replace(/\s+/g, '_')}.pdf`;
-          pdfDoc.save(filename);
-          
-          // Show notification
-          const notification = document.getElementById('notification');
-          notification.innerHTML = `
-            <strong>Success:</strong> PDF report downloaded
-          `;
-          notification.className = "notification success";
-          notification.style.display = "block";
-          
-          // Hide notification after 5 seconds
-          setTimeout(() => {
-            notification.style.display = "none";
-          }, 5000);
-        }
-      } catch (error) {
-        console.error("Error generating PDF:", error);
-        alert("There was an error generating the PDF. Please try again.");
-      }
-    });
-    
-    document.getElementById('sendEmailBtn').addEventListener('click', function() {
-      if (!currentEntry || !currentDecision || currentDecision.decision !== "Approved") return;
-      
-      sendApprovalEmail(currentEntry);
-    });
-    
-    // Initialize
-    fetchData();
-  </script>
+    </script>
 </body>
 </html>
